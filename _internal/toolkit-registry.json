@@ -10,9 +10,9 @@
       "status": "stable",
       "upstream": "https://github.com/remotion-dev/skills",
       "created": "2026-02-19",
-      "updated": "2026-11-09",
+      "updated": "2026-11-16",
       "upstreamPath": "skills/remotion-best-practices",
-      "upstreamVersion": "4.0.542"
+      "upstreamVersion": "4.0.544"
     },
     "remotion": {
       "path": ".claude/skills/remotion/",
@@ -994,12 +994,21 @@
       "category": "publishing",
       "backend": "ElevenLabs Scribe ($0.40/audio hour) or local whisper",
       "options": {
-        "engine": ["auto", "scribe", "whisper"],
-        "skip": ["--no-captions", "--no-chapters"],
+        "engine": [
+          "auto",
+          "scribe",
+          "whisper"
+        ],
+        "skip": [
+          "--no-captions",
+          "--no-chapters"
+        ],
         "fresh": "--fresh (transcribe again; otherwise a saved transcript newer than the render is reused)",
         "jsonOut": true
       },
-      "envVars": ["ELEVENLABS_API_KEY"],
+      "envVars": [
+        "ELEVENLABS_API_KEY"
+      ],
       "note": "Writes out/publish/ (video.srt, video.captions.json, chapters.txt, kit.json). Chapter titles from project.json scenes[].title or the scene file names. /publish runs it before the dry run.",
       "created": "2026-11-10",
       "updated": "2026-11-10"
